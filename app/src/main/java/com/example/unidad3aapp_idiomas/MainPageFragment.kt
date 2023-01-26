@@ -8,39 +8,42 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.unidad3aapp_idiomas.databinding.FragmentMainPageBinding
 import com.squareup.picasso.Picasso
 
 
 class MainPageFragment : Fragment() {
 
     val args: MainPageFragmentArgs by navArgs()
-    private var _binding: MainPageFragment? = null
+    private var _binding: FragmentMainPageBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_page, container, false)
-    }
+        _binding = FragmentMainPageBinding.inflate(inflater, container, false)
+        return binding.root
 
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var title = view.findViewById<TextView>(R.id.languageTitle)
-        var picture = view.findViewById<ImageView>(R.id.mPageImage)
+        Log.i("IMAGEN SELECCIONADO ----->", args.parameters.selectedLanguage.toString())
+        Log.i("IDIOMA SELECCIONADO ----->", args.parameters.language.toString())
+        val picture = view.findViewById<ImageView>(R.id.mPageImage)
 
-        title.text = args.languageSelected
-        Picasso.get().load(args.pictureToShow).into(picture)
 
-        Log.i("probando títuloooooo", args.languageSelected)
 
-        Log.i("probando fotooooooo", args.pictureToShow)
-
+        //Picasso.get().load(args.selectedlanguage.image).into(picture)
     }
+
+
+
 }
+

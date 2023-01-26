@@ -8,6 +8,7 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     android:id="@+id/card"
+    android:background="@drawable/rounded_corners"
     card_view:cardBackgroundColor="#FFFF"
     card_view:cardCornerRadius="8dp"
     card_view:contentPadding="10dp"
@@ -29,13 +30,16 @@
                 android:id="@+id/cardImage"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="10dp"/>
 
 
             <TextView
                 android:id="@+id/languageChoice"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
+                android:layout_marginEnd="60dp"
                 android:text="alemán, español, francés..." />
 
         </LinearLayout>

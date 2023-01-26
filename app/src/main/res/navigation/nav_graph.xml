@@ -53,12 +53,10 @@
         android:label="fragment_main_page"
         tools:layout="@layout/fragment_main_page" >
         <argument
-            android:name="pictureToShow"
-            app:argType="string" />
-        <argument
-            android:name="languageSelected"
-            app:argType="string" />
+            android:name="parameters"
+            app:argType="com.example.unidad3aapp_idiomas.Languages" />
     </fragment>
+
 
 
 </navigation>
