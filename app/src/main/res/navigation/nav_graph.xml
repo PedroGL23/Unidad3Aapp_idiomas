@@ -24,7 +24,14 @@
         tools:layout="@layout/fragment_language_menu" >
         <action
             android:id="@+id/action_languageMenuFragment_to_mainPageFragment"
-            app:destination="@id/mainPageFragment" />
+            app:destination="@id/mainPageFragment" >
+            <argument
+                android:name="pictureToShow"
+                android:defaultValue="pruebaaaa picture" />
+            <argument
+                android:name="languageSelected"
+                android:defaultValue="prueba languageee" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -44,7 +51,14 @@
         android:id="@+id/mainPageFragment"
         android:name="com.example.unidad3aapp_idiomas.MainPageFragment"
         android:label="fragment_main_page"
-        tools:layout="@layout/fragment_main_page" />
+        tools:layout="@layout/fragment_main_page" >
+        <argument
+            android:name="pictureToShow"
+            app:argType="string" />
+        <argument
+            android:name="languageSelected"
+            app:argType="string" />
+    </fragment>
 
 
 </navigation>

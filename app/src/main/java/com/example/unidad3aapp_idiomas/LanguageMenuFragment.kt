@@ -6,18 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
-import java.io.BufferedReader
 import java.io.IOException
-import java.io.InputStreamReader
-
 
 
 class LanguageMenuFragment : Fragment() {
 
-    var demoIdiomas = listOf("Español", "Inglés", "Alemán", "Francés", "Chino", "Japonés", "Italiano", "Portugués", "Polaco", "Ruso", "Sueco", "Árabe")
+
     lateinit var myReyclerView: RecyclerView
     private lateinit var mAdapter: RecyclerAdapter
 
@@ -42,7 +40,10 @@ class LanguageMenuFragment : Fragment() {
 
         myReyclerView = view.findViewById(R.id.languageMenuRecycler)
         myReyclerView.layoutManager = layoutManager
-        mAdapter = RecyclerAdapter(languages.data)
+        mAdapter = RecyclerAdapter(languages.data){
+
+            findNavController().navigate(R.id.action_languageMenuFragment_to_mainPageFragment)
+        }
         myReyclerView.adapter = mAdapter
 
     }
