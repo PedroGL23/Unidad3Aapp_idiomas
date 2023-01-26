@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         //languageMenuRecycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         //mainRecyclerView.adapter = mAdapter
 
-
-
     }
+
+
 }

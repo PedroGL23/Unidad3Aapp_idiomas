@@ -11,19 +11,40 @@
         android:label="fragment_welcome_screen"
         tools:layout="@layout/fragment_welcome_screen" >
         <action
-            android:id="@+id/action_welcomeScreenFragment_to_languageMenuFragment"
-            app:destination="@id/languageMenuFragment" />
+            android:id="@+id/action_welcomeScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/languageMenuFragment"
         android:name="com.example.unidad3aapp_idiomas.LanguageMenuFragment"
         android:label="fragment_language_menu"
-        tools:layout="@layout/fragment_language_menu" />
+        tools:layout="@layout/fragment_language_menu" >
+        <action
+            android:id="@+id/action_languageMenuFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.unidad3aapp_idiomas.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_languageMenuFragment"
+            app:destination="@id/languageMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.unidad3aapp_idiomas.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.unidad3aapp_idiomas.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" />
 
 
 </navigation>

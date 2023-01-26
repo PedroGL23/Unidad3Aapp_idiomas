@@ -25,7 +25,7 @@ class WelcomeScreenFragment : Fragment() {
 
         view.findViewById<Button>(R.id.btnSignIn).setOnClickListener{
             Log.i("Comprobaion", "Está entrando...")
-            findNavController().navigate(R.id.action_welcomeScreenFragment_to_languageMenuFragment)
+            findNavController().navigate(R.id.action_welcomeScreenFragment_to_registerFragment)
         }
 
     }
